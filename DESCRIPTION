@@ -1,0 +1,26 @@
+Package: vispear
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: Mikolaj Bogucki
+Maintainer: Mikołaj Bogucki <mikolaj.bogucki@pearson.com>
+Description: More about what it does (maybe more than one line)
+License: GPL-2
+Imports:
+    dplyr (>= 0.7.4),
+    DT (>= 0.2),
+    extrafont (>= 0.17),
+    extrafontdb (>= 1.0),
+    formattable,
+    ggplot2 (>= 2.2.0),
+    grid (>= 3.3.2),
+    htmltools (>= 0.3.6),
+    magrittr (>= 1.5),
+    purrr (>= 0.2.4),
+    RColorBrewer (>= 1.1-2),
+    readr (>= 1.1.1)
+Remotes: renkun-ken/formattable
+URL: 
+Encoding: UTF-8
+RoxygenNote: 6.0.1
+
