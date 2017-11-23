@@ -27,15 +27,15 @@ Create datatable in ENR style
 }
 \examples{
 \dontrun{
-datatable_enr(mtcars, 
+datatable_enr(mtcars,
         desc_column = 1:3,
         tooltip = "This is a description of table."
 )
 
 output$mtcars_table <- renderDataTable({
- 
+
  datatable_enr(mtcars, tooltip = "Lorem", id = "mtcars_table")
- 
+
 })
 }
 }

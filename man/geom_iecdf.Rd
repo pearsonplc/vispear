@@ -46,7 +46,7 @@ the default plot specification, e.g. \code{borders}.}
 \item{stat}{The statistical transformation to use on the data for this
 layer, as a string.}
 
-\item{params}{Additional parameters to the \code{geom} and \code{stat}.}
+\item{...}{Additional parameters to the \code{geom} and \code{stat}.}
 }
 \description{
 create a plot with inverse empirical cumulative distribution function
