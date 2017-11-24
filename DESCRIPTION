@@ -1,6 +1,6 @@
 Package: vispear
 Type: Package
-Title: What the Package Does (Title Case)
+Title: A package facilitating data visualisation using Pearson branding
 Version: 0.1.0
 Author: Mikolaj Bogucki
 Maintainer: Mikołaj Bogucki <mikolaj.bogucki@pearson.com>
@@ -20,7 +20,7 @@ Imports:
     RColorBrewer (>= 1.1-2),
     readr (>= 1.1.1)
 Remotes: renkun-ken/formattable
-URL: 
+URL: https://bitbucket.pearson.com/projects/EF/repos/vispear/browse
 Encoding: UTF-8
 RoxygenNote: 6.0.1
 

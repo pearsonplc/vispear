@@ -1,0 +1,98 @@
+---
+title: "ENRanalytics Introduction"
+author: "Nicolabo"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Pakiet `ENRanalytics` jest zbiorem przydatnych funckji w naszej codziennej pracy.
+
+
+## Intalacja 
+
+```{r, warning = F, eval = F}
+# devtools::install_github('Nicolabo/PERUanalytics',build_vignettes = TRUE)
+```
+
+
+
+```{r, warning = F, echo = F}
+library(ENRanalytics)
+library(ggplot2)
+```
+
+## Figures - peru_point
+
+Funkcja `peru_point` łączy w sobie możliwośći funckji `ggplot`, `geom_point` i `theme_peru`. Podstawowym przykładem jest:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+# peru_point(mtcars, qsec, mpg)
+```
+
+który to zapis jest równoważny z:
+
+```{r, eval = FALSE}
+# ggplot(mtcars, aes(qsec, mpg))+
+#   geom_point(size = 6, color = cat_colors[1])+
+#   theme_peru()
+```
+
+Parametrami funckji `peru_point` są:
+
+```{r, warning = F, echo = F}
+# names(formals(peru_point))
+```
+
+Zmienne `data`,`x`,`y` odpowiadają za podstawowy format wykresu. Zmienna `vcolor` różni się od parametru `color` tym, że jest odpowiedzialna  za definiowanie zmiennej grupującej. W `ggplot2` fukcja jest używana w składni `aes` jako parametr `color` np.
+
+```{r, warning = F, eval = F}
+# ggplot(mtcars, aes(x = qsec, y = mpg, color = factor(cyl)))
+```
+
+Natomiast pod parametrem `...` mogą pojawić się wszystkie dostępne parametry w `geom_point` odpowiedzialne np. za wielkość punktów (domyśla wartość: `size =  6`), kolor punktów (domyślna wartość: `color = categorical_colors[1]`) itp., jak również parametry funckji `theme_peru` np. tytuł legendy, wielkość tytułów osi, wielkość tesktu na osi itp.
+
+Jeśli zachodzi potrzeba zmiany koloru i wielkośći punktów, wystarczy:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+# peru_point(mtcars, qsec, mpg, color = cat_colors[2], size = 3)
+```
+
+Funckcja `peru_point` pozwala łatwo wprowadzić dodatkową zmienną grupującą. Mowa oczywiście o parametrze `color`:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+# peru_point(mtcars, qsec, mpg, factor(cyl))
+```
+
+Dla pewności użyto tutaj format `factor()` ponieważ zmienna grupująca musi być w tej postaci. Oczywiście jeśli zmienna jest w postaci `factor()` wystarczy użyć `peru_point(mtcars, qsec, mpg, cyl)`. 
+W powyższym przypadku funkcja `peru_point` automatycznie użyła 3 podstawocyh kolorów z grupy `categorical_colors`. Jeśli jednak zajdzie potrzeba aby użyć innego kompletu barw z `categorical_colors` wystarczy (szczególnie uzyteczne, kiedy chcemy uniknąć czerwonego koloru):
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+# peru_point(mtcars, qsec, mpg, factor(cyl), color = cat_colors[c(1,5,7)])
+```
+
+Oczywiście można też wykorzystać wbudowane pakiety kolorów z grup `diverging_colors` albo `sequential_colors`:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+# peru_point(mtcars, qsec, mpg, factor(cyl), color = seq_colors)
+```
+
+Dodatkowo funckja `peru_point` ma ustawione na sztywno wielkość punktów w legendzie (`size = 10`). Oznacza to, że niezależnie od używanej wielkości na wykresie, legenda pozostaje ta sama. Można też dodać tytuł:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+# peru_point(mtcars, qsec, mpg, factor(cyl), size = 3,legend_title = 'Cylinder')
+```
+
+Oczywiście funkcja `peru_point` działa razem z innymi funkcjami `ggplot2`, podobnie jak w przypadku kodu `ggplot2` łącząc linię za pomocą `+`:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+# peru_point(mtcars, qsec, mpg, factor(cyl))+
+#   xlab("Value of qsec")+
+  # ylab("Value of mpg")
+```
+
+Generalnie, `peru_point` pozwala na wygenerowanie docelowego wykresu za pomocą trzech linii.
+

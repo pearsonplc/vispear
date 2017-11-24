@@ -1,0 +1,90 @@
+---
+title: "PERUanalytics: draw_scale_numeric function"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, warning = F, echo = F}
+library(ENRanalytics)
+library(ggplot2)
+library(scales)
+```
+
+Funkcja `draw_scale_numeric` zawiera w sobie kluczowe możliwości funkcji `scale_y_continuous`
+oraz `scale_x_continuous`. Podstawowym przykładem jest:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+set.seed(123)
+x <- sample(1:nrow(diamonds), 2000)
+ggplot(diamonds[x, ], aes(depth, price))+
+        geom_point(size = 5, color = cat_colors[1])+
+        theme_peru() +
+        draw_scale_numeric('y',min = 0, max = 20000)
+```
+
+---
+
+Parametrami funckji `draw_scale_numeric` są:
+
+```{r, warning = F, echo = F}
+names(formals(draw_scale_numeric))
+```
+
+* Argument `axis` (możliwe wartości `x` i `y`) wskazuje na oś, którą chcemy manipulować.
+
+* Argument `min` i `max` odpowiadają za przedział jaki zostanie zaprezentowany na osi.
+
+* Argument `step` wskazuje ile pomocniczych wartości liczbowych ma się pojawić na osi. 
+Domyślna wartość to `(max - min)/10`.
+
+* Argument `labels` umożliwia zastosowanie róźnych formatów. Domyślna wartość, `(labels = comma)`
+powoduje że wartośći tysieczne posiadają przecinki. Wykorzystanie tej funkcji spowoduje,
+że nie będzie trzeba o tym pamiętać za każdym razem.Innym użytecznym dla nas formatem
+będzie wartość `labels = percent` która wygeneruje wartości procentowe.
+
+Przykładowe użycie argumentu `labels = percent` prezentuję poniżej:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+set.seed(123)
+x <- sample(1:nrow(diamonds), 2000)
+ggplot(diamonds[x, ], aes(depth/ max(depth), price))+
+        geom_point(size = 6,
+                   color = cat_colors[1])+
+        theme_peru() +
+        draw_scale_numeric('y',
+                           min = 0,
+                           max = 20000) +
+        draw_scale_numeric('x',
+                           min = 0.6, 
+                           max = 1, 
+                           labels = percent)
+
+```
+
+***
+Istotne jest to że w pierwotnej wersji funkcji `scale_y_continuous` funkcja musiałaby
+uwzględnić argument `breaks` wskazujący na ilość pomocniczych wartości oraz argument `limits`
+wskazującą na przedział na osi. Oczywiście musiałby się też pojawić argument `labels = comma` 
+w funkcji odpowiadającej na osi x:
+
+```{r, warning = F, fig.width = 17, fig.height = 8, dpi = 40}
+set.seed(123)
+x <- sample(1:nrow(diamonds), 2000)
+ggplot(diamonds[x, ], aes(depth/ max(depth), price))+
+        geom_point(size = 6, 
+                   color = cat_colors[1])+
+        theme_peru() +
+        scale_y_continuous(limits = c(0,20000), 
+                           breaks = seq(0,20000,2000),
+                           labels = comma
+                           ) +
+        scale_x_continuous(limits = c(0.6,1), 
+                           breaks = seq(0.6,1,0.04),
+                           labels = percent)
+```
+
+Zachęcam do zapoznania się z prostą w użyciu funkcją!
