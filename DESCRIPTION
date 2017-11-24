@@ -1,7 +1,7 @@
 Package: vispear
 Type: Package
 Title: A package facilitating data visualisation using Pearson branding
-Version: 0.1.0
+Version: 1.0.0
 Author: Mikolaj Bogucki
 Maintainer: Mikołaj Bogucki <mikolaj.bogucki@pearson.com>
 Description: More about what it does (maybe more than one line)
