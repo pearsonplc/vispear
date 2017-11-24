@@ -88,7 +88,7 @@ datatable_enr <- function(data
     htmltools::htmlDependency(
       name = "custom_css"
       , version = "1.0"
-      , src = c(file = system.file("datatable", "css", package = 'ENRanalytics'))
+      , src = c(file = system.file("datatable", "css", package = 'vispear'))
       # , src = c(href = "css")
       , stylesheet = "datatable_layout.css"
     )
@@ -97,7 +97,7 @@ datatable_enr <- function(data
     htmltools::htmlDependency(
       name = "bootstrap"
       , version = "1.0"
-      , src = c(file = system.file("datatable", "bootstrap", package = 'ENRanalytics'))
+      , src = c(file = system.file("datatable", "bootstrap", package = 'vispear'))
       # , src = c(href = "css")
       , script = "js/bootstrap.min.js"
       , stylesheet = "css/bootstrap.min.css"
