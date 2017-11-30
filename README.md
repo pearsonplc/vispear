@@ -7,18 +7,14 @@ Desrciption of `vispear` package.
 Installation
 ------------
 
-First install `pearsonverse` [package](https://bitbucket.pearson.com/projects/EF/repos/pearsonverse/browse). During attaching `pearsonverse`, it installs all `*pear` packages.
+First install `pearsonverse` [package](https://github.com/pearsonplc/pearsonverse). It will install all `*pear` packages.
 
 ``` r
-library(pearsonverse)
+devtools::install_github("pearsonplc/pearsonverse")
 ```
 
 However, if you want install just `vispear` package:
 
 ``` r
-##### CHANGE THIS LINE START #####
-bibucket_login <- "example" 
-##### CHANGE THIS LINE END #######
-
-pearsonverse::install_pkgpear("vispear", bibucket_login)  
+devtools::install_github("pearsonplc/vispear")
 ```

@@ -20,7 +20,8 @@ Imports:
     RColorBrewer (>= 1.1-2),
     readr (>= 1.1.1)
 Remotes: renkun-ken/formattable
-URL: https://bitbucket.pearson.com/projects/EF/repos/vispear/browse
+URL: https://github.com/pearsonplc/vispear
+BugReports: https://github.com/pearsonplc/vispear/issues
 Encoding: UTF-8
 RoxygenNote: 6.0.1
 
