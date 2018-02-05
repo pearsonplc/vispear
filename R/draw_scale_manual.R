@@ -18,16 +18,17 @@
 #'      }
 
 draw_scale_manual <- function(method = "", color = cat_colors, legend_title = "Legend"){
-  suppressWarnings(if (method == "fill") {
-    if (color == div_colors) ggplot2::scale_fill_brewer(name = legend_title, palette = "RdBu")
-    else if (color == seq_colors) ggplot2::scale_fill_brewer(name = legend_title, palette = "Blues")
-    else ggplot2::scale_fill_manual(name = legend_title, values = color)
-  }
-  else if (method == "color"){
-    if (color == div_colors) ggplot2::scale_color_brewer(name = legend_title, palette = "RdBu")
-    else if (color == seq_colors) ggplot2::scale_color_brewer(name = legend_title, palette = "Blues")
-    else ggplot2::scale_color_manual(name = legend_title, values = color)
-  }
+  suppressWarnings(
+    if (method == "fill") {
+      if (color == div_colors) ggplot2::scale_fill_brewer(name = legend_title, palette = "RdBu")
+      else if (color == seq_colors) ggplot2::scale_fill_brewer(name = legend_title, palette = "Blues")
+      else ggplot2::scale_fill_manual(name = legend_title, values = color)
+    }
+    else if (method == "color"){
+      if (color == div_colors) ggplot2::scale_color_brewer(name = legend_title, palette = "RdBu")
+      else if (color == seq_colors) ggplot2::scale_color_brewer(name = legend_title, palette = "Blues")
+      else ggplot2::scale_color_manual(name = legend_title, values = color)
+    }
   )
 }
 
