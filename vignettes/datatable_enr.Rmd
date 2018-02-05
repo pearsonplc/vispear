@@ -1,5 +1,5 @@
 ---
-title: "Tables in our reports - new `ENRanalytics` functions"
+title: "Tables in our reports"
 author: "MB"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
@@ -10,7 +10,7 @@ vignette: >
 ---
   
 ```{r, warning = F, echo = F, message = F}
-library(ENRanalytics)
+library(vispear)
 library(ggplot2)
 library(scales)
 library(dplyr)
@@ -32,7 +32,7 @@ datatable_enr(data,
 
 ### Use cases
 
-The new function `datatable_enr` is the extention of DT package. It provides fixed `ENRanalytics` layout, and also, it facilitates the process of creating good-looking tables. We present several examples.
+The new function `datatable_enr` is the extention of `DT` package. It provides fixed `vispear` layout, and also, it facilitates the process of creating good-looking tables. We present several examples.
 
 Below you can see a simple case with only one parameter - `data`.
 
@@ -62,7 +62,7 @@ Besides, by using `desc_column` argument, you can differentiate first columns fr
 datatable_enr(mtcars, desc_column = 1:3, tooltip = "This is the description of table.")
 ```
 
-In original `datatable` function (DT package), you can add several arguments in `options` argument. In order to allow you to customize a table, you can add whatever arguments in `options` which you would include in the original `datatable` function.
+In original `datatable` function (`DT` package), you can add several arguments in `options` argument. In order to allow you to customize a table, you can add whatever arguments in `options` which you would include in the original `datatable` function.
 
 ```{r}
 datatable_enr(mtcars,
