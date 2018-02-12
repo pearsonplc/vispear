@@ -4,14 +4,15 @@
 \name{vispear-package}
 \alias{vispear}
 \alias{vispear-package}
-\title{vispear: What the Package Does (Title Case)}
+\title{vispear: A package facilitating data visualisation using Pearson branding}
 \description{
 More about what it does (maybe more than one line)
 }
 \seealso{
 Useful links:
 \itemize{
-  \item \url{}
+  \item \url{https://github.com/pearsonplc/vispear}
+  \item Report bugs at \url{https://github.com/pearsonplc/vispear/issues}
 }
 
 }

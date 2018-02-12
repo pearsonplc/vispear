@@ -4,15 +4,15 @@
 \alias{save_plot}
 \title{Function for saving a plot.}
 \usage{
-save_plot(plot_name, file_name = "plot", type_file = "png", width = 13,
-  height = 8, dpi = 150)
+save_plot(name, file = "plot", type = "png", width = 13, height = 8,
+  dpi = 150)
 }
 \arguments{
-\item{plot_name}{Name of plot we want to export.}
+\item{name}{Plot name we want to export.}
 
-\item{file_name}{Name of file we want to see in directory. Default filename: "plot"}
+\item{file}{File name or path. Default filename: "plot"}
 
-\item{type_file}{Type of file we want to export. It is possible to export plot in  certain format:eps/ps, pdf, jpeg, tiff, png, bmp, svg Default type of file: png}
+\item{type}{File type  we want to export. It is possible to export plot in certain format:eps/ps, pdf, jpeg, tiff, png, bmp, svg Default type of file: png}
 
 \item{width}{Width of exported plot. Default value: 13 inches}
 

@@ -4,13 +4,12 @@
 \alias{save_plot2}
 \title{Function for saving a plot in pdf and png format at once.}
 \usage{
-save_plot2(plot_name, file_name = "plot", width = 13, height = 8,
-  dpi = 150)
+save_plot2(name, file = "plot", width = 13, height = 8, dpi = 150)
 }
 \arguments{
-\item{plot_name}{Name of plot we want to export.}
+\item{name}{Plot name we want to export.}
 
-\item{file_name}{Name of file we want to see in directory. Default filename: "plot"}
+\item{file}{File name or path. Default filename: "plot"}
 
 \item{width}{Width of exported plot. Default value: 13 inches}
 

@@ -6,6 +6,11 @@
 \usage{
 simple_formatter(min.col = p_colors[4], max.col = p_colors[1])
 }
+\arguments{
+\item{min.col}{Minimum of gradient color. By default. vispear::p_colors[4]}
+
+\item{max.col}{Maximum of gradient color. By default. vispear::p_colors[1]}
+}
 \description{
 formatter no 2
 }

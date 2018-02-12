@@ -41,11 +41,6 @@ rather than combining with them. This is most useful for helper functions
 that define both data and aesthetics and shouldn't inherit behaviour from
 the default plot specification, e.g. \code{borders}.}
 
-\item{...}{other arguments passed on to layer. These are often aesthetics, used to set an aesthetic to a fixed value, like color = "red" or size = 3. They may also be parameters to the paired geom/stat.}
-
-\item{stat}{The statistical transformation to use on the data for this
-layer, as a string.}
-
 \item{...}{Additional parameters to the \code{geom} and \code{stat}.}
 }
 \description{

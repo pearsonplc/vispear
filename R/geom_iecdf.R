@@ -19,11 +19,8 @@
 #'    the plot data. The return value must be a \code{data.frame.}, and
 #'    will be used as the layer data.
 #' @param geom The geometric object to use display the data
-#' @param stat The statistical transformation to use on the data for this
-#'    layer, as a string.
 #' @param position Position adjustment, either as a string, or the result of
 #'  a call to a position adjustment function.
-#' @param ... other arguments passed on to layer. These are often aesthetics, used to set an aesthetic to a fixed value, like color = "red" or size = 3. They may also be parameters to the paired geom/stat.
 #' @param show.legend logical. Should this layer be included in the legends?
 #'   \code{NA}, the default, includes if any aesthetics are mapped.
 #'   \code{FALSE} never includes, and \code{TRUE} always includes.
