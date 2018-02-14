@@ -1,7 +1,7 @@
 Package: vispear
 Type: Package
 Title: A package facilitating data visualisation using Pearson branding
-Version: 1.0.0
+Version: 1.0.1
 Author: Mikolaj Bogucki
 Maintainer: Mikołaj Bogucki <mikolaj.bogucki@pearson.com>
 Description: More about what it does (maybe more than one line)
@@ -18,7 +18,8 @@ Imports:
     magrittr (>= 1.5),
     purrr (>= 0.2.4),
     RColorBrewer (>= 1.1-2),
-    readr (>= 1.1.1)
+    readr (>= 1.1.1),
+    rlang (>= 0.1.6)
 Remotes: renkun-ken/formattable
 URL: https://github.com/pearsonplc/vispear
 BugReports: https://github.com/pearsonplc/vispear/issues

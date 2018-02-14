@@ -5,8 +5,8 @@
 \title{E&R theme for all plots in presentation}
 \usage{
 theme_enr(method = "color", legend_title = "Legend", color = cat_colors,
-  fig_number = "", text_font = "OpenSans",
-  title_font = "OpenSans-Semibold", axis_title_size = 22,
+  fig_number = "", text_font = "Open Sans",
+  title_font = "Open Sans Semibold", axis_title_size = 22,
   axis_text_size = 17, xtext_slope = 0, xtext_position = 0.5,
   legend_object_size = 1.2, legend_text_size = 14, legend_title_size = 15)
 }
@@ -46,7 +46,7 @@ ggplot(mtcars, aes(factor(cyl), wt))+
      geom_bar(stat = "identity", fill = categorical_colors[1])+
      theme_enr()+
      draw_scale_numeric("y",0,60)
-     
+
 ggplot(diamonds[1:100,], aes(depth, carat, color = factor(cut)))+
      geom_point(size = 7)+
      theme_enr("color")+
