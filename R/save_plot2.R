@@ -15,9 +15,7 @@ save_plot2 <- function(name,
                        dpi = 150) {
 
 
-  extrafont::loadfonts("pdf", quiet = TRUE)
-  if (.Platform$OS.type == "windows")
-    extrafont::loadfonts("win", quiet = TRUE)
+  fonts_save()
 
   ggplot2::ggsave(
     paste0(file, ".png"), name, width = width,
@@ -27,4 +25,10 @@ save_plot2 <- function(name,
     paste0(file, ".pdf"), name, width = width,
     height = height, dpi = dpi
   )
+
+  pdf_file <- paste0(file, ".pdf")
+  extrafont::embed_fonts(pdf_file)
+
+  invisible(NULL)
+
 }

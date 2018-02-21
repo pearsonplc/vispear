@@ -17,13 +17,23 @@ save_plot <-
            height = 8,
            dpi = 150) {
 
+
+    file_name <- paste0(file,".",type)
+    fonts_save()
+
     ggplot2::ggsave(
-      paste0(file,".",type),
+      file_name,
       name,
       width = width,
       height = height,
       dpi = dpi
     )
+
+    if (type == "pdf")
+      extrafont::embed_fonts(file_name)
+
+    invisible(NULL)
+
   }
 
 
