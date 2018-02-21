@@ -18,10 +18,37 @@ load_enr_fonts <- function(message = TRUE) {
 download_enr_fonts <- function(){
 
     path <- c(file = system.file("fonts", "ttf/", package = 'vispear'))
-    system(paste0("cp -R ", path, " /Library/Fonts/"))
-    extrafont::font_import(prompt = F, pattern = "OpenSans")
-    extrafont::loadfonts(quiet = T)
+
+    # dest_path <- switch(get_os(),
+    #                     "osx" = " /Library/Fonts/",
+    #                     "linux" = " /usr/share/fonts/"
+    # )
+
+    # system(paste0("cp -R ", path, dest_path))
+    extrafont::font_import(paths = path, prompt = F, pattern = "OpenSans")
 
     # restart RStudio session
     .rs.restartR()
+}
+
+# extract info about operating system
+get_os <- function() {
+
+  sysinf <- Sys.info()
+
+  if (!is.null(sysinf)) {
+    os <- sysinf['sysname']
+    if (os == 'Darwin')
+      os <- "osx"
+  }
+
+  else {
+    ## mystery machine
+    os <- .Platform$OS.type
+    if (grepl("^darwin", R.version$os))
+      os <- "osx"
+    if (grepl("linux-gnu", R.version$os))
+      os <- "linux"
+  }
+  tolower(os)
 }
