@@ -18,9 +18,7 @@ load_enr_fonts <- function(message = TRUE) {
 download_enr_fonts <- function(){
 
     path <- c(file = system.file("fonts", "ttf/", package = 'vispear'))
-    system(paste0("cp -R ", path, " /Library/Fonts/"))
-    extrafont::font_import(prompt = F, pattern = "OpenSans")
-    extrafont::loadfonts(quiet = T)
+    extrafont::font_import(paths = path, prompt = F, pattern = "OpenSans")
 
     # restart RStudio session
     .rs.restartR()

@@ -70,11 +70,10 @@ A pair of functions which allows to create interactive table with coherent layou
 A function which lists all available defined palettes.
 
     #>   palette_name                     description
-    #> 1     p_colors      4-coloured Pearson palette
-    #> 2    p_colors2      8-coloured Pearson palette
-    #> 3   cat_colors 20-coloured categorical palette
-    #> 4   div_colors   11-coloured diverging palette
-    #> 5   seq_colors   9-coloured sequential palette
-    #> 6  pair_colors      '6-pair of colors' palette
-    #> 7  trio_colors     '6-trios of colors' palette
-    #> 8  quar_colors  '6-quartets of colors` palette
+    #> 1     p_colors      8-coloured Pearson palette
+    #> 2   cat_colors 20-coloured categorical palette
+    #> 3   div_colors   11-coloured diverging palette
+    #> 4   seq_colors   9-coloured sequential palette
+    #> 5  pair_colors      '6-pair of colors' palette
+    #> 6  trio_colors     '6-trios of colors' palette
+    #> 7  quar_colors  '6-quartets of colors` palette

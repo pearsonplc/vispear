@@ -3,12 +3,12 @@
 \docType{data}
 \name{p_colors}
 \alias{p_colors}
-\title{4 different colors - Pearson colors}
-\format{An object of class \code{character} of length 4.}
+\title{8 different colors - Pearson colors (second palette)}
+\format{An object of class \code{character} of length 8.}
 \usage{
 p_colors
 }
 \description{
-4 different colors - Pearson colors
+8 different colors - Pearson colors (second palette)
 }
 \keyword{datasets}
