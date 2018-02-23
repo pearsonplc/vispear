@@ -61,7 +61,7 @@ ggplot(mtcars, aes(qsec, mpg, color = factor(cyl))) +
   geom_point(size = 5)
 ```
 
-![plot](https://raw.githubusercontent.com/pearsonplc/vispear/readme/inst/img/example_plot_basic.png)
+![plot](https://raw.githubusercontent.com/pearsonplc/vispear/master/inst/img/example_plot_basic.png)
 
 _Defined layout_
 
@@ -71,7 +71,7 @@ ggplot(mtcars, aes(qsec, mpg, color = factor(cyl))) +
   theme_enr(color = p_colors)
 ```
 
-![plot](https://raw.githubusercontent.com/pearsonplc/vispear/readme/inst/img/example_plot.png)
+![plot](https://raw.githubusercontent.com/pearsonplc/vispear/master/inst/img/example_plot.png)
 
 #### 1.2 _save_plot() & save_plot2()_
 
@@ -81,7 +81,7 @@ A pair of functions which allows to save graphs into a file. By default, `save_p
 
 A pair of functions which allows to create interactive table with coherent layout. It's really useful when you want to add a table in the report. More info <a href = "http://ea.ioki.pl/~mbogucki/datatable_enr.html" target = '_blank'>here</a>.
 
-![datatable_enr](https://raw.githubusercontent.com/pearsonplc/vispear/readme/inst/img/datatable_enr.png)
+![datatable_enr](https://raw.githubusercontent.com/pearsonplc/vispear/master/inst/img/datatable_enr.png)
 
 #### 1.4 _show_enr_palettes()_
 
