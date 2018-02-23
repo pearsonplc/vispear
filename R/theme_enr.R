@@ -42,7 +42,10 @@ theme_enr <- function(method = "color",
                       legend_text_size = 14,
                       legend_title_size = 15) {
 
-  load_enr_fonts(message = F)
+  is_openSans <- any(extrafont::fonts() %in% "Open Sans")
+
+  if (!is_openSans)
+    stop("Open Sans font is not installed. Please use `load_fonts` function.", call. = FALSE)
 
   list(
     ggtitle(fig_number),
