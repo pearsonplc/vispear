@@ -105,10 +105,10 @@ sign_formatter <- function() {
 
 #' formatter no 2
 #' @export
-#' @param min.col Minimum of gradient color. By default. vispear::p_colors[4]
-#' @param max.col Maximum of gradient color. By default. vispear::p_colors[1]
+#' @param min.col Minimum of gradient color. By default. "#D4EAE4"
+#' @param max.col Maximum of gradient color. By default. "#007FA3"
 
-simple_formatter <- function(min.col = p_colors[4], max.col = p_colors[1]) {
+simple_formatter <- function(min.col = "#D4EAE4", max.col = "#007FA3") {
   formatter("span",
             style = x ~ style(display = "block",
                               background = as.vector(x) %>% gradient(min.color = min.col, max.color = max.col) %>% csscolor(),

@@ -4,12 +4,12 @@
 \alias{simple_formatter}
 \title{formatter no 2}
 \usage{
-simple_formatter(min.col = p_colors[4], max.col = p_colors[1])
+simple_formatter(min.col = "#D4EAE4", max.col = "#007FA3")
 }
 \arguments{
-\item{min.col}{Minimum of gradient color. By default. vispear::p_colors[4]}
+\item{min.col}{Minimum of gradient color. By default. "#D4EAE4"}
 
-\item{max.col}{Maximum of gradient color. By default. vispear::p_colors[1]}
+\item{max.col}{Maximum of gradient color. By default. "#007FA3"}
 }
 \description{
 formatter no 2
